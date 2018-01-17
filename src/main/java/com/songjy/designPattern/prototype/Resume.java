@@ -13,7 +13,15 @@ public class Resume implements Cloneable{
 		this.name = name;
 		workexperience = new WorkExperience();
 	}
-	
+	//私有的狗仔方法，用来深度克隆
+	private Resume(WorkExperience workexperience){
+		try {
+			this.workexperience = (WorkExperience)workexperience.clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+			this.workexperience=new WorkExperience();
+		}
+	}
 
 	public String getName() {
 		return name;
@@ -32,6 +40,14 @@ public class Resume implements Cloneable{
 		
 		Resume resume = (Resume)super.clone();
 		resume.workexperience = (WorkExperience)this.workexperience.clone();
+		return resume;
+		
+	}
+	//深度克隆实现2
+	protected Object deepClone2() throws CloneNotSupportedException {
+		
+		Resume resume = new Resume(this.workexperience);
+		resume.setName(this.name);
 		return resume;
 		
 	}
