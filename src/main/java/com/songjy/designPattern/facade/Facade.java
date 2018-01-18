@@ -1,5 +1,7 @@
 package com.songjy.designPattern.facade;
-
+/*
+ * 外观设计模式
+ */
 public class Facade {
 	
 	private SubSystemOne systemOne;
