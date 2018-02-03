@@ -1,5 +1,9 @@
 package com.songjy.written.sort;
-
+/**
+ * 快速排序
+ * @author songjy
+ *
+ */
 public class MyQuickSort {
 
 	public static void sort(int[] arrs,int begin,int end){
