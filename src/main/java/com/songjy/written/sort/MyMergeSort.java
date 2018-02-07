@@ -1,5 +1,10 @@
 package com.songjy.written.sort;
 
+/**
+ * 归并排序
+ * @author songjy
+ *
+ */
 public class MyMergeSort {
 
 	public static void main(String[] args) {
@@ -20,7 +25,7 @@ public class MyMergeSort {
 		int middle = (left+right)/2;
 		mergesort(arrs,left,middle);
 		mergesort(arrs,middle+1,right);
-		merge(arrs,left,middle,right);
+		//merge(arrs,left,middle,right);
 		merger_1(arrs,left,right);
 		
 	}
